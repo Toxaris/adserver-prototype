@@ -1,5 +1,7 @@
 # adserver-prototype
 
+[![Build Status](https://travis-ci.org/Toxaris/adserver-prototype.svg?branch=master)](https://travis-ci.org/Toxaris/adserver-prototype)
+
 Prototype of an adserver that chooses ads based on campaign
 constraints. The prototype focuses on the ad selection process.
 
