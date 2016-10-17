@@ -5,6 +5,21 @@
 Prototype of an adserver that chooses ads based on campaign
 constraints. The prototype focuses on the ad selection process.
 
+## How to read the source
+
+If your favorite editor is not set up for Haskell, consider
+generating the documentation, which will also create syntax
+highlighted source code where identifiers are links to their
+definitions. See below for how to generate and find the
+documentation.
+
+If you want to navigate to the source files on the file system,
+here are the interesting parts of the project layout:
+
+ - The `src/lib/AdServer/*.hs` files contain the implementation.
+
+ - The `src/test/AdServer/*/Test.hs` files contain unit test.
+
 ## How to build
 
   * Install https://www.haskellstack.org
