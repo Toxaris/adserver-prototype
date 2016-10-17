@@ -2,7 +2,7 @@
 -- Copyright 2016 Tillmann Rendel.
 -- All Rights Reservered.
 
-{-# LANGUAGE TemplateHaskell #-}
+{-# LANGUAGE GeneralizedNewtypeDeriving, TemplateHaskell #-}
 
 -- | Representation of ad identifiers.
 module AdServer.Identifier where
@@ -13,8 +13,10 @@ import Data.Text (Text)
 
 import Data.Aeson.TH
 
+import Web.HttpApiData (FromHttpApiData (..))
+
 -- | Ad identifier.
 newtype Identifier = MakeIdentifier Text
-  deriving (Eq, Show)
+  deriving (Eq, Show, FromHttpApiData)
 
 deriveJSON jsonOptions ''Identifier
