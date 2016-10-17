@@ -6,6 +6,7 @@
 module AdServer.Test where
 
 import qualified AdServer.Encoding.Test as Encoding
+import qualified AdServer.Identifier.Test as Identifier
 
 import Test.Tasty
 
@@ -17,4 +18,5 @@ main = defaultMain tests
 tests :: TestTree
 tests = testGroup "AdServer"
   [ Encoding.tests
+  , Identifier.tests
   ]

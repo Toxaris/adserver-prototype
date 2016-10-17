@@ -21,6 +21,7 @@ library
     AdServer.Encoding
     AdServer.Identifier
   build-depends:
+    aeson >= 0.11.2.1 && < 0.12,
     base >= 4.7 && < 5,
     servant >= 0.8.1 && < 0.9,
     split >= 0.2.3.1 && < 0.3,
@@ -35,11 +36,14 @@ test-suite adserver-prototype-test
   other-modules:
     AdServer.Test
     AdServer.Encoding.Test
+    AdServer.Identifier.Test
   build-depends:
     adserver-prototype,
+    aeson >= 0.11.2.1 && < 0.12,
     base >= 4.7 && < 5,
     tasty >= 0.11.0.4 && < 0.12,
-    tasty-hunit >= 0.9.2 && < 0.10
+    tasty-hunit >= 0.9.2 && < 0.10,
+    text >= 1.2.2.1 && < 1.3
 
 source-repository head
   type: git
