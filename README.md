@@ -15,7 +15,8 @@ constraints. The prototype focuses on the ad selection process.
     Haskell toolchain.
 
 The first build can take some time because stack will download
-and compile all dependencies. Later builds will be faster.
+and compile all (transitive) dependencies. Later builds will be
+faster.
 
 ## How to run automated tests
 
