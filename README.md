@@ -21,3 +21,7 @@ faster.
 ## How to run automated tests
 
   * Run `stack test` in the top-level directory of the repository.
+
+    The first run will download and build the (transitive)
+    dependencies of the test-suite, so it can take some more
+    time. Later test runs will be faster.
