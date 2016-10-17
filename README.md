@@ -23,7 +23,7 @@ here are the interesting parts of the project layout:
 
  - The `src/test/AdServer/*/Test.hs` files contain unit test.
 
-## How to build
+## How to build the server
 
   * Install https://www.haskellstack.org
   * Clone repository
@@ -43,6 +43,27 @@ faster.
     The first run will download and build the (transitive)
     dependencies of the test-suite, so it can take some more
     time. Later test runs will be faster.
+
+## How to run the server
+
+  * First build the server (see above)
+
+  * Run `stack exec adserver-prototype` in the top-level
+    directory of the repository.
+
+  * The server should start and tell you that it listens at port
+    8081.
+
+  * If you need it to listen at another port, edit the
+    `let port = 8081` line in `src/lib/AdServer/Server.hs`.
+
+  * You can make requests such as
+
+        curl -i http://localhost:8081/ads/foo
+
+    which should return `"foo"`.
+
+  * Use Ctrl-C to shut down the server.
 
 ## How to generate and view documentation
 
