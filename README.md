@@ -18,6 +18,9 @@ here are the interesting parts of the project layout:
 
  - The `src/lib/AdServer/*.hs` files contain the implementation.
 
+ - The `src/lib/AdServer/Server.hs` file contains the `main`
+   function, the entry point for the server.
+
  - The `src/test/AdServer/*/Test.hs` files contain unit test.
 
 ## How to build
