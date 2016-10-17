@@ -5,6 +5,8 @@
 -- | Unit tests for adserver prototype.
 module AdServer.Test where
 
+import qualified AdServer.Encoding.Test as Encoding
+
 import Test.Tasty
 
 -- | Entrypoint for running all unit tests.
@@ -13,4 +15,6 @@ main = defaultMain tests
 
 -- | All unit tests.
 tests :: TestTree
-tests = testGroup "adserver-prototype" []
+tests = testGroup "AdServer"
+  [ Encoding.tests
+  ]

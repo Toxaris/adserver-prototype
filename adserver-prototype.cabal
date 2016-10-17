@@ -18,10 +18,12 @@ library
   default-language: Haskell2010
   exposed-modules:
     AdServer.API
+    AdServer.Encoding
     AdServer.Identifier
   build-depends:
     base >= 4.7 && < 5,
     servant >= 0.8.1 && < 0.9,
+    split >= 0.2.3.1 && < 0.3,
     text >= 1.2.2.1 && < 1.3
 
 test-suite adserver-prototype-test
@@ -32,10 +34,12 @@ test-suite adserver-prototype-test
   main-is: adserver-prototype-test.hs
   other-modules:
     AdServer.Test
+    AdServer.Encoding.Test
   build-depends:
     adserver-prototype,
     base >= 4.7 && < 5,
-    tasty >= 0.11.0.4 && < 0.12
+    tasty >= 0.11.0.4 && < 0.12,
+    tasty-hunit >= 0.9.2 && < 0.10
 
 source-repository head
   type: git
